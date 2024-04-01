@@ -1,0 +1,366 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+:root {
+    --bg-body: #000000; /* Negro */
+    --primary-color: #FFA500; /* Anaranjado */
+    --secondary-color: #0000FF; /* Azul */
+    --accent-color: #FFFFFF; /* Blanco */
+    --highlight-color: #800080; /* Morado */
+    --accent-color2: #FF69B4; /* Rosado */
+    --fontSize-title: 40px;
+    --fontSize-parrafos: 20px;
+}
+
+/* Estilos generales */
+body {
+    background: var(--bg-body);
+    margin: 0; /* Corregido */
+    color: var(--accent-color); /* Modificado */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; /* Corregido */
+    color: var(--accent-color); /* Modificado */
+}
+
+p, a, li, td, input, label {
+    font-family: "Darker Grotesque", sans-serif;
+    margin: 0; /* Corregido */
+    color: var(--accent-color); /* Modificado */
+}
+
+/* Header */
+header {
+    padding-top: 150px;
+}
+
+nav.bg-gym {
+    background: var(--bg-body);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    top: 0;
+    left: 0;
+}
+
+nav.bg-gym .navbar-brand img {
+    width: 200px;
+}
+
+nav.bg-gym ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav.bg-gym ul li {
+    margin-top: 14px;
+}
+
+nav.bg-gym ul li a {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin: 0 12px;
+    position: relative;
+}
+
+nav.bg-gym ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: .4s;
+}
+
+nav.bg-gym ul li a:hover {
+    color: var(--highlight-color);
+}
+
+nav.bg-gym ul li a:hover::after {
+    background: var(--accent-color2);
+    width: 40%;
+}
+
+nav.bg-gym ul li.login {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+nav.bg-gym ul li.registro a {
+    display: block;
+    padding: 12px 30px;
+    color: var(--accent-color);
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Hero */
+#hero {
+    padding: 160px 0;
+    background-color: transparent; /* Modificado */
+}
+
+#hero .cont-foto {
+    position: relative;
+    width: 400px;
+}
+
+#hero .cont-foto img {
+    position: relative;
+    width: 100%;
+}
+
+#hero .cont-foto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none; /* Modificado */
+    z-index: 1;
+}
+
+#hero .cont-info {
+    padding-left: 60px;
+    color: var(--accent-color); /* Modificado */
+}
+
+#hero .cont-info h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--accent-color); /* Modificado */
+}
+
+#hero .cont-info h1 span {
+    border-bottom: 12px solid var(--accent-color);
+}
+
+#hero .cont-info p {
+    font-size: var(--fontSize-parrafos);
+    margin-bottom: 60px;
+}
+
+#hero .cont-info .destacada h2 {
+    font-size: var(--fontSize-title);
+    color: var(--accent-color); /* Modificado */
+}
+
+#hero .cont-info .destacada p {
+    font-size: 14px;
+}
+
+/* Secciones */
+section {
+    padding: 150px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: var(--fontSize-title);
+    font-weight: 700;
+    color: var(--accent-color); /* Modificado */
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: var(--fontSize-parrafos);
+    margin-bottom: 60px;
+    color: var(--accent-color); /* Modificado */
+}
+
+section .row {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+section .card-services {
+    background: #292c36;
+    border-radius: 4px;
+    position: relative;
+    padding: 50px 30px;
+    text-align: left;
+    transition: .4s;
+    max-width: 280px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+section .card-services:hover {
+    background: var(--primary-color);
+}
+
+section .card-services img {
+    background: var(--accent-color);
+    width: 70px;
+    padding: 15px;
+    border-radius: 4px;
+    position: absolute;
+    top: -30px;
+    left: 30px;
+}
+
+section .card-services h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--accent-color); /* Modificado */
+}
+
+section .card-services h4 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--accent-color); /* Modificado */
+}
+
+section .card-services p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    color: var(--accent-color); /* Modificado */
+}
+
+section .card-services a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--accent-color2); /* Modificado */
+    border-bottom: 2px solid var(--accent-color2);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer img {
+    width: 200px;
+}
+
+/* Estilos para el blog */
+#blog {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#blog h1 {
+    font-size: var(--fontSize-title);
+    font-weight: 700;
+    color: var(--accent-color); /* Modificado */
+    margin-bottom: 30px;
+}
+
+#blog article {
+    margin-bottom: 30px;
+}
+
+#blog article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--accent-color); /* Modificado */
+}
+
+#blog article img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#blog article p {
+    font-size: var(--fontSize-parrafos);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--accent-color); /* Modificado */
+}
+
+#blog article a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-color); /* Modificado */
+}
+
+#blog article a:hover {
+    color: var(--accent-color2); /* Modificado */
+}
+
+/* Sección de Contacto */
+#contacto {
+    background: #292c36;
+    padding: 150px 0;
+}
+
+#contacto h2 {
+    font-size: var(--fontSize-title);
+    font-weight: 700;
+    color: var(--accent-color); /* Modificado */
+    margin-bottom: 30px;
+}
+
+#contacto p {
+    font-size: var(--fontSize-parrafos);
+    margin-bottom: 60px;
+    color: var(--accent-color); /* Modificado */
+}
+
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contacto form input[type="text"],
+#contacto form input[type="email"],
+#contacto form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+#contacto form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#contacto form input[type="submit"]:hover {
+    background-color: var(--accent-color2);
+}
+
+#contacto form textarea {
+    resize: none;
+    height: 200px;
+}
+
+#contacto .info {
+    color: var(--accent-color); /* Modificado */
+}
+
+#contacto .info i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+#contacto .info p {
+    font-size: 16px;
+}
+
